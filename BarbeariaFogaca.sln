@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarbeariaFogaca", "BarbeariaFogaca.csproj", "{64B0385D-3800-4D3D-A922-977B3A7AC6E2}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "instalador_barbearia", "instalador\instalador_barbearia\instalador_barbearia.vdproj", "{089D7926-81D8-4BD0-919A-D49DADF50A47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64B0385D-3800-4D3D-A922-977B3A7AC6E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64B0385D-3800-4D3D-A922-977B3A7AC6E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64B0385D-3800-4D3D-A922-977B3A7AC6E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64B0385D-3800-4D3D-A922-977B3A7AC6E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{089D7926-81D8-4BD0-919A-D49DADF50A47}.Debug|Any CPU.ActiveCfg = Debug
+		{089D7926-81D8-4BD0-919A-D49DADF50A47}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {390C8B2F-513C-4A3E-A474-B24E89B8B28B}
+	EndGlobalSection
+EndGlobal
