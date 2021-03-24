@@ -15,7 +15,5 @@ namespace BarbeariaFogaca
         public string creditos;
         public string devendo;
         public Int32 cortes;
-
-
     }
 }

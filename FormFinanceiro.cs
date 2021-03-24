@@ -48,13 +48,13 @@ namespace BarbeariaFogaca
                     DataTable dt =  obterDadosFinanceiro(dataIni, dataFin);
                     dgv_financeiro.DataSource = dt;
                     dgv_financeiro.Columns[0].Width = 40;
-                    dgv_financeiro.Columns[1].Width = 78;
-                    dgv_financeiro.Columns[2].Width = 100;
-                    dgv_financeiro.Columns[3].Width = 85;
-                    dgv_financeiro.Columns[4].Width = 160;
-                    dgv_financeiro.Columns[5].Width = 130;
+                    dgv_financeiro.Columns[1].Width = 70;
+                    dgv_financeiro.Columns[2].Width = 90;
+                    dgv_financeiro.Columns[3].Width = 60;
+                    dgv_financeiro.Columns[4].Width = 105;
+                    dgv_financeiro.Columns[5].Width = 87;
                     dgv_financeiro.Columns[6].Width = 60;
-                    dgv_financeiro.Columns[7].Width = 80;
+                    dgv_financeiro.Columns[7].Width = 65;
 
                     int totalLinhas = dt.Rows.Count;
                     for(int i =0; i < totalLinhas; i++)
@@ -104,21 +104,6 @@ namespace BarbeariaFogaca
                 return null;
             }
              
-        }
-
-
-        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
-        {
-            ///mtb_inicial.Text = monthCalendar1.SelectionStart.ToShortDateString();
-           // mtb_final.Text = monthCalendar1.SelectionEnd.ToShortDateString();
-           // AtualizarDgv();
-        }
-
-        private void monthCalendar1_DateChanged_1(object sender, DateRangeEventArgs e)
-        {
-            //mtb_inicial.Text = monthCalendar1.SelectionStart.ToShortDateString();
-            //mtb_final.Text = monthCalendar1.SelectionEnd.ToShortDateString();
-            //AtualizarDgv();
         }
 
         private void btn_verificar_Click(object sender, EventArgs e)
@@ -230,6 +215,27 @@ namespace BarbeariaFogaca
             FormAdicionarPagamento formAdicionarPagamento = new FormAdicionarPagamento();
             formAdicionarPagamento.ShowDialog();
             AtualizarDgv();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(dgv_financeiro.SelectedRows.Count > 0)
+            {
+                Financeiro f = new Financeiro();
+                f.id = int.Parse(dgv_financeiro.SelectedRows[0].Cells[0].Value.ToString());
+                f.barbeiro = dgv_financeiro.SelectedRows[0].Cells[2].Value.ToString();
+                f.cliente = dgv_financeiro.SelectedRows[0].Cells[4].Value.ToString();
+                f.descricao = dgv_financeiro.SelectedRows[0].Cells[5].Value.ToString();
+                f.valor = Decimal.Parse(dgv_financeiro.SelectedRows[0].Cells[6].Value.ToString());
+                f.data = dgv_financeiro.SelectedRows[0].Cells[1].Value.ToString();
+                f.tipoPagamento = dgv_financeiro.SelectedRows[0].Cells[7].Value.ToString();
+                FormEdicaoFinanceiro edicaoFinanceiro = new FormEdicaoFinanceiro(f);
+                edicaoFinanceiro.ShowDialog();
+            }
+            else
+            {
+                DialogResult res = MessageBox.Show("É necessario selecionar o item a ser alterado","Erro ao selecionar Item", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

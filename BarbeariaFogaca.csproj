@@ -85,6 +85,7 @@
     <Compile Include="Barbeiro.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Corte.cs" />
+    <Compile Include="Financeiro.cs" />
     <Compile Include="FinanceiroContador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +157,12 @@
     </Compile>
     <Compile Include="FormDespesa.Designer.cs">
       <DependentUpon>FormDespesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEdicaoFinanceiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEdicaoFinanceiro.Designer.cs">
+      <DependentUpon>FormEdicaoFinanceiro.cs</DependentUpon>
     </Compile>
     <Compile Include="FormFinanceiro.cs">
       <SubType>Form</SubType>
@@ -243,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDespesa.resx">
       <DependentUpon>FormDespesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEdicaoFinanceiro.resx">
+      <DependentUpon>FormEdicaoFinanceiro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormFinanceiro.resx">
       <DependentUpon>FormFinanceiro.cs</DependentUpon>
