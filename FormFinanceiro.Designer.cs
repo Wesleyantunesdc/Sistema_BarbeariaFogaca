@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -54,6 +54,8 @@
             this.btn_excluir = new System.Windows.Forms.Button();
             this.btn_addEntrada = new System.Windows.Forms.Button();
             this.btn_alterarSelecionado = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.tb_filtro = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -275,25 +277,25 @@
             this.dgv_financeiro.AllowUserToAddRows = false;
             this.dgv_financeiro.AllowUserToDeleteRows = false;
             this.dgv_financeiro.BackgroundColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_financeiro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_financeiro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_financeiro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_financeiro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgv_financeiro.EnableHeadersVisualStyles = false;
-            this.dgv_financeiro.Location = new System.Drawing.Point(3, 61);
+            this.dgv_financeiro.Location = new System.Drawing.Point(3, 89);
             this.dgv_financeiro.MultiSelect = false;
             this.dgv_financeiro.Name = "dgv_financeiro";
             this.dgv_financeiro.ReadOnly = true;
             this.dgv_financeiro.RowHeadersVisible = false;
             this.dgv_financeiro.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgv_financeiro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_financeiro.Size = new System.Drawing.Size(597, 545);
+            this.dgv_financeiro.Size = new System.Drawing.Size(597, 517);
             this.dgv_financeiro.TabIndex = 1;
             // 
             // btn_Despesa
@@ -362,6 +364,26 @@
             this.btn_alterarSelecionado.UseVisualStyleBackColor = true;
             this.btn_alterarSelecionado.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label13.Location = new System.Drawing.Point(2, 36);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(199, 29);
+            this.label13.TabIndex = 77;
+            this.label13.Text = "Buscar registros..";
+            // 
+            // tb_filtro
+            // 
+            this.tb_filtro.Location = new System.Drawing.Point(3, 68);
+            this.tb_filtro.Name = "tb_filtro";
+            this.tb_filtro.Size = new System.Drawing.Size(597, 20);
+            this.tb_filtro.TabIndex = 76;
+            this.tb_filtro.TextChanged += new System.EventHandler(this.tb_filtro_TextChanged);
+            // 
             // FormFinanceiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -370,6 +392,8 @@
             this.BackgroundImage = global::BarbeariaFogaca.Properties.Resources.login;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1008, 618);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.tb_filtro);
             this.Controls.Add(this.btn_alterarSelecionado);
             this.Controls.Add(this.btn_addEntrada);
             this.Controls.Add(this.btn_excluir);
@@ -432,5 +456,7 @@
         private System.Windows.Forms.Button btn_excluir;
         private System.Windows.Forms.Button btn_addEntrada;
         private System.Windows.Forms.Button btn_alterarSelecionado;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox tb_filtro;
     }
 }

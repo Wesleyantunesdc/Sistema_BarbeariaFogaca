@@ -91,11 +91,19 @@ namespace BarbeariaFogaca
         //Obter todos os dados do financeiro
         private DataTable obterDadosFinanceiro(string dataIni, string dataFin)
         {
+            string filtro = tb_filtro.Text;
             try
             {
                 DataTable dt = new DataTable();
                 string sql = String.Format(@"SELECT N_IDFINANCEIRO as 'ID', D_DATA as 'Data', T_BARBEIRO as 'Barbeiro',T_CATEGORIA as 'Categoria', T_CLIENTE as 'Cliente', T_DESCRICAO as 'Descrição', D_VALOR as 'Valor', T_TIPOPAGAMENTO as 'Pagamento'
-                FROM tb_financeiro WHERE D_DATA BETWEEN '{0}' AND '{1}' ORDER BY D_DATA",dataIni,dataFin);
+                FROM tb_financeiro WHERE (D_DATA BETWEEN '{0}' AND '{1}') AND 
+                        (N_IDFINANCEIRO LIKE '{2}%' OR
+                        T_BARBEIRO LIKE '{3}%' OR
+                        T_CATEGORIA LIKE '{4}%' OR
+                        T_CLIENTE LIKE '{5}%' OR
+                        T_DESCRICAO LIKE '{6}%' OR
+                        D_VALOR LIKE '{7}%' OR
+                        T_TIPOPAGAMENTO LIKE '{8}%') ORDER BY D_DATA", dataIni,dataFin,filtro,filtro,filtro,filtro, filtro, filtro,filtro);
                 dt = Banco.dql(sql);
                 return dt;
             }catch(Exception ex)
@@ -236,6 +244,11 @@ namespace BarbeariaFogaca
             {
                 DialogResult res = MessageBox.Show("É necessario selecionar o item a ser alterado","Erro ao selecionar Item", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void tb_filtro_TextChanged(object sender, EventArgs e)
+        {
+            AtualizarDgv();
         }
     }
 }
