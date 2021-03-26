@@ -39,13 +39,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tb_descricao = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.tb_tipoPagamento = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tb_valor = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btn_addEntrada = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cb_tipoPagamento = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label8
@@ -62,8 +64,10 @@
             // 
             // tb_id
             // 
+            this.tb_id.Cursor = System.Windows.Forms.Cursors.No;
             this.tb_id.Location = new System.Drawing.Point(12, 94);
             this.tb_id.Name = "tb_id";
+            this.tb_id.ReadOnly = true;
             this.tb_id.Size = new System.Drawing.Size(164, 20);
             this.tb_id.TabIndex = 41;
             // 
@@ -119,8 +123,10 @@
             // 
             // tb_data
             // 
-            this.tb_data.Location = new System.Drawing.Point(459, 94);
+            this.tb_data.Cursor = System.Windows.Forms.Cursors.No;
+            this.tb_data.Location = new System.Drawing.Point(429, 331);
             this.tb_data.Name = "tb_data";
+            this.tb_data.ReadOnly = true;
             this.tb_data.Size = new System.Drawing.Size(164, 20);
             this.tb_data.TabIndex = 51;
             // 
@@ -130,7 +136,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(454, 65);
+            this.label6.Location = new System.Drawing.Point(424, 302);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 26);
             this.label6.TabIndex = 50;
@@ -141,7 +147,7 @@
             this.tb_descricao.Location = new System.Drawing.Point(12, 215);
             this.tb_descricao.Multiline = true;
             this.tb_descricao.Name = "tb_descricao";
-            this.tb_descricao.Size = new System.Drawing.Size(417, 75);
+            this.tb_descricao.Size = new System.Drawing.Size(441, 75);
             this.tb_descricao.TabIndex = 53;
             // 
             // label2
@@ -155,13 +161,6 @@
             this.label2.Size = new System.Drawing.Size(109, 26);
             this.label2.TabIndex = 52;
             this.label2.Text = "Descrição";
-            // 
-            // tb_tipoPagamento
-            // 
-            this.tb_tipoPagamento.Location = new System.Drawing.Point(12, 331);
-            this.tb_tipoPagamento.Name = "tb_tipoPagamento";
-            this.tb_tipoPagamento.Size = new System.Drawing.Size(180, 20);
-            this.tb_tipoPagamento.TabIndex = 55;
             // 
             // label7
             // 
@@ -177,7 +176,7 @@
             // 
             // tb_valor
             // 
-            this.tb_valor.Location = new System.Drawing.Point(236, 331);
+            this.tb_valor.Location = new System.Drawing.Point(212, 331);
             this.tb_valor.Name = "tb_valor";
             this.tb_valor.Size = new System.Drawing.Size(193, 20);
             this.tb_valor.TabIndex = 57;
@@ -188,7 +187,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label9.Location = new System.Drawing.Point(231, 302);
+            this.label9.Location = new System.Drawing.Point(207, 302);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(120, 26);
             this.label9.TabIndex = 56;
@@ -197,7 +196,7 @@
             // btn_addEntrada
             // 
             this.btn_addEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_addEntrada.Location = new System.Drawing.Point(655, 408);
+            this.btn_addEntrada.Location = new System.Drawing.Point(626, 408);
             this.btn_addEntrada.Name = "btn_addEntrada";
             this.btn_addEntrada.Size = new System.Drawing.Size(140, 37);
             this.btn_addEntrada.TabIndex = 58;
@@ -207,7 +206,7 @@
             // btn_cancelar
             // 
             this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancelar.Location = new System.Drawing.Point(509, 408);
+            this.btn_cancelar.Location = new System.Drawing.Point(480, 408);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(140, 37);
             this.btn_cancelar.TabIndex = 59;
@@ -217,13 +216,50 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(345, 158);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(108, 20);
             this.button2.TabIndex = 60;
-            this.button2.Text = "Alterar";
+            this.button2.Text = "Selecionar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.monthCalendar1.Location = new System.Drawing.Point(526, 94);
+            this.monthCalendar1.MaxSelectionCount = 1;
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 61;
+            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(549, 70);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(187, 20);
+            this.label1.TabIndex = 62;
+            this.label1.Text = "Alterar a Data do registro";
+            // 
+            // cb_tipoPagamento
+            // 
+            this.cb_tipoPagamento.FormattingEnabled = true;
+            this.cb_tipoPagamento.Items.AddRange(new object[] {
+            "Dinheiro",
+            "Debito",
+            "Credito",
+            "Pix",
+            "Troca de Serviço",
+            "Outros"});
+            this.cb_tipoPagamento.Location = new System.Drawing.Point(12, 330);
+            this.cb_tipoPagamento.Name = "cb_tipoPagamento";
+            this.cb_tipoPagamento.Size = new System.Drawing.Size(177, 21);
+            this.cb_tipoPagamento.TabIndex = 63;
             // 
             // FormEdicaoFinanceiro
             // 
@@ -231,13 +267,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BarbeariaFogaca.Properties.Resources.login;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(771, 450);
+            this.Controls.Add(this.cb_tipoPagamento);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_addEntrada);
             this.Controls.Add(this.tb_valor);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.tb_tipoPagamento);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tb_descricao);
             this.Controls.Add(this.label2);
@@ -274,12 +312,14 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tb_descricao;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tb_tipoPagamento;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tb_valor;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btn_addEntrada;
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cb_tipoPagamento;
     }
 }

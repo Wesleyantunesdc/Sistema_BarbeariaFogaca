@@ -98,6 +98,34 @@ namespace BarbeariaFogaca
             }
         }
 
+
+        public static string formatarExibicaoData(string data)
+        {
+            try
+            {
+                if(data.IndexOf('/')== 4 || data.IndexOf('-') == 4)
+                {
+                    string ano = data.Substring(0, 4);
+                    string mes = data.Substring(5, 2);
+                    string dia = data.Substring(8, 2);
+                    return String.Format(dia + "-" + mes + "-" + ano);
+                }
+                else
+                {
+                    string dia = data.Substring(0, 2);
+                    string mes = data.Substring(3, 2);
+                    string ano = data.Substring(6, 4);
+                    return String.Format(dia + "/" + mes + "/" + ano);
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                DialogResult res = MessageBox.Show("Erro ao formatar data!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return "";
+            }
+        }
+
     }
 
 }

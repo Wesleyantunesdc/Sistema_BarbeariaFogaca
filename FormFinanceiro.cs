@@ -47,6 +47,13 @@ namespace BarbeariaFogaca
                 {
                     DataTable dt =  obterDadosFinanceiro(dataIni, dataFin);
                     dgv_financeiro.DataSource = dt;
+                    for (int i = 0; i < dgv_financeiro.Rows.Count; i++)
+                    {
+                        string dataHora = dgv_financeiro.Rows[i].Cells[1].Value.ToString();
+                        //string data = dataHora.Substring(0,10).Replace('/','-');
+                        //string hora = dataHora.Substring(data.Length, 9);
+                        dgv_financeiro.Rows[i].Cells[1].Value = Util.formatarExibicaoData(dataHora).Replace('-','/');
+                    }
                     dgv_financeiro.Columns[0].Width = 40;
                     dgv_financeiro.Columns[1].Width = 70;
                     dgv_financeiro.Columns[2].Width = 90;
