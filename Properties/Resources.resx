@@ -121,35 +121,17 @@
   <data name="AcessoNegadoImg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AcessoNegadoImg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="barbeariaImg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagens\barbeariaImg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="subtrair" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\subtrair1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="backgroundFinanceiro3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagens\backgroundFinanceiro3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="backgroundFinanceiro2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagens\backgroundFinanceiro2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="backgroundFinanceiro4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagens\backgroundFinanceiro4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="AcessoLiberadoImg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AcessoLiberadoImg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="backgroundFinanceiro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagens\backgroundFinanceiro.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TotalDinheiro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\imagens\TotalDinheiro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="alterar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\alterar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagens\menu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="adicionar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\adicionar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
