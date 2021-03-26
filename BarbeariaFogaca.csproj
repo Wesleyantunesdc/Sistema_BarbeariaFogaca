@@ -351,11 +351,15 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="backgroundopc.jpg" />
+    <Content Include="barber-shop-equipment-on-wooden-table.jpg" />
+    <None Include="imagens\fundoTelas.jpg" />
     <Content Include="Resources\adicionar.png" />
     <None Include="Resources\subtrair1.png" />
     <None Include="Resources\alterar1.png" />
     <None Include="Resources\adicionar1.png" />
     <Content Include="Resources\alterar.png" />
+    <Content Include="Resources\fundoTelas.jpg" />
     <Content Include="Resources\subtrair.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

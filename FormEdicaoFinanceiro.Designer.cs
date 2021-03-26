@@ -265,7 +265,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::BarbeariaFogaca.Properties.Resources.login;
+            this.BackgroundImage = global::BarbeariaFogaca.Properties.Resources.fundoTelas;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(771, 450);
             this.Controls.Add(this.cb_tipoPagamento);

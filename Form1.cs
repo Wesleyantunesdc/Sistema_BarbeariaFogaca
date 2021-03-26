@@ -237,11 +237,11 @@ namespace BarbeariaFogaca
                     DataTable dt = Banco.dql(sql);
                     dgv_agendamentos.DataSource = dt;
                     dgv_agendamentos.Columns[0].Width = 40;
-                    dgv_agendamentos.Columns[1].Width = 180;
-                    dgv_agendamentos.Columns[2].Width = 180;
+                    dgv_agendamentos.Columns[1].Width = 120;
+                    dgv_agendamentos.Columns[2].Width = 170;
                     dgv_agendamentos.Columns[3].Width = 120;
-                    dgv_agendamentos.Columns[4].Width = 100;
-                    dgv_agendamentos.Columns[5].Width = 60;
+                    dgv_agendamentos.Columns[4].Width = 50;
+                    dgv_agendamentos.Columns[5].Width = 52;
                 }
                 catch (Exception ex)
                 {

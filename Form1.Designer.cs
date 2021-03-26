@@ -80,7 +80,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Silver;
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.menuStrip1.Font = new System.Drawing.Font("Rockwell", 12F);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sistemaToolStripMenuItem,
@@ -349,11 +349,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Rockwell", 80F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(-20, 59);
+            this.label1.Location = new System.Drawing.Point(31, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(918, 119);
+            this.label1.Size = new System.Drawing.Size(941, 119);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Barbearia Fogaça";
+            this.label1.Text = "Sistema Barbearia";
             // 
             // label3
             // 
@@ -372,7 +372,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::BarbeariaFogaca.Properties.Resources.adicionar;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(736, 210);
+            this.pictureBox1.Location = new System.Drawing.Point(581, 210);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(66, 50);
             this.pictureBox1.TabIndex = 6;
@@ -384,7 +384,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::BarbeariaFogaca.Properties.Resources.subtrair;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(735, 322);
+            this.pictureBox2.Location = new System.Drawing.Point(580, 322);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(66, 50);
             this.pictureBox2.TabIndex = 7;
@@ -396,7 +396,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = global::BarbeariaFogaca.Properties.Resources.alterar;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(736, 266);
+            this.pictureBox3.Location = new System.Drawing.Point(581, 266);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(66, 50);
             this.pictureBox3.TabIndex = 8;
@@ -426,7 +426,7 @@
             this.dgv_agendamentos.RowHeadersVisible = false;
             this.dgv_agendamentos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgv_agendamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_agendamentos.Size = new System.Drawing.Size(726, 323);
+            this.dgv_agendamentos.Size = new System.Drawing.Size(572, 323);
             this.dgv_agendamentos.TabIndex = 9;
             // 
             // lb_horario
@@ -452,7 +452,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::BarbeariaFogaca.Properties.Resources.fundoTelas;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(984, 574);
             this.Controls.Add(this.lb_horario);
