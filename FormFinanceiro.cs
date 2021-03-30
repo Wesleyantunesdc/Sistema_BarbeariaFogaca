@@ -186,6 +186,10 @@ namespace BarbeariaFogaca
                     
                 }
             }
+            else
+            {
+                DialogResult res = MessageBox.Show("É necessario selecionar o item a ser excluido!", "Erro ao selecionar Item", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             AtualizarDgv();
         }
 
@@ -251,6 +255,7 @@ namespace BarbeariaFogaca
             {
                 DialogResult res = MessageBox.Show("É necessario selecionar o item a ser alterado","Erro ao selecionar Item", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            AtualizarDgv();
         }
 
         private void tb_filtro_TextChanged(object sender, EventArgs e)

@@ -42,7 +42,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tb_valor = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.btn_addEntrada = new System.Windows.Forms.Button();
+            this.btn_alterar = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
@@ -104,8 +104,10 @@
             // 
             // tb_cliente
             // 
+            this.tb_cliente.Cursor = System.Windows.Forms.Cursors.No;
             this.tb_cliente.Location = new System.Drawing.Point(12, 158);
             this.tb_cliente.Name = "tb_cliente";
+            this.tb_cliente.ReadOnly = true;
             this.tb_cliente.Size = new System.Drawing.Size(335, 20);
             this.tb_cliente.TabIndex = 49;
             // 
@@ -193,15 +195,16 @@
             this.label9.TabIndex = 56;
             this.label9.Text = "Valor Pago";
             // 
-            // btn_addEntrada
+            // btn_alterar
             // 
-            this.btn_addEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_addEntrada.Location = new System.Drawing.Point(626, 408);
-            this.btn_addEntrada.Name = "btn_addEntrada";
-            this.btn_addEntrada.Size = new System.Drawing.Size(140, 37);
-            this.btn_addEntrada.TabIndex = 58;
-            this.btn_addEntrada.Text = "Alterar";
-            this.btn_addEntrada.UseVisualStyleBackColor = true;
+            this.btn_alterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_alterar.Location = new System.Drawing.Point(626, 408);
+            this.btn_alterar.Name = "btn_alterar";
+            this.btn_alterar.Size = new System.Drawing.Size(140, 37);
+            this.btn_alterar.TabIndex = 58;
+            this.btn_alterar.Text = "Alterar";
+            this.btn_alterar.UseVisualStyleBackColor = true;
+            this.btn_alterar.Click += new System.EventHandler(this.btn_alterar_Click);
             // 
             // btn_cancelar
             // 
@@ -216,6 +219,7 @@
             // 
             // button2
             // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.No;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(345, 158);
             this.button2.Name = "button2";
@@ -273,7 +277,7 @@
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_cancelar);
-            this.Controls.Add(this.btn_addEntrada);
+            this.Controls.Add(this.btn_alterar);
             this.Controls.Add(this.tb_valor);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
@@ -315,7 +319,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tb_valor;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btn_addEntrada;
+        private System.Windows.Forms.Button btn_alterar;
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
