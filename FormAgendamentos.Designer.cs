@@ -46,6 +46,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.mtb_horario = new System.Windows.Forms.MaskedTextBox();
             this.check_atendido = new System.Windows.Forms.CheckBox();
+            this.btn_selecionar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,7 +127,7 @@
             // 
             this.tb_cliente.Location = new System.Drawing.Point(12, 112);
             this.tb_cliente.Name = "tb_cliente";
-            this.tb_cliente.Size = new System.Drawing.Size(287, 20);
+            this.tb_cliente.Size = new System.Drawing.Size(240, 20);
             this.tb_cliente.TabIndex = 6;
             // 
             // label3
@@ -226,6 +227,18 @@
             this.check_atendido.Text = "ATENDIDO";
             this.check_atendido.UseVisualStyleBackColor = false;
             // 
+            // btn_selecionar
+            // 
+            this.btn_selecionar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_selecionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_selecionar.Location = new System.Drawing.Point(243, 112);
+            this.btn_selecionar.Name = "btn_selecionar";
+            this.btn_selecionar.Size = new System.Drawing.Size(71, 20);
+            this.btn_selecionar.TabIndex = 18;
+            this.btn_selecionar.Text = "Selecionar";
+            this.btn_selecionar.UseVisualStyleBackColor = true;
+            this.btn_selecionar.Click += new System.EventHandler(this.btn_selecionar_Click);
+            // 
             // FormAgendamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,6 +247,7 @@
             this.BackgroundImage = global::BarbeariaFogaca.Properties.Resources.fundoTelas;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(573, 270);
+            this.Controls.Add(this.btn_selecionar);
             this.Controls.Add(this.check_atendido);
             this.Controls.Add(this.mtb_horario);
             this.Controls.Add(this.label6);
@@ -281,5 +295,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MaskedTextBox mtb_horario;
         private System.Windows.Forms.CheckBox check_atendido;
+        private System.Windows.Forms.Button btn_selecionar;
     }
 }

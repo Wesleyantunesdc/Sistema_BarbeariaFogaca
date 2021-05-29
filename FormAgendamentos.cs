@@ -17,6 +17,7 @@ namespace BarbeariaFogaca
         public FormAgendamentos()
         {
             InitializeComponent();
+            PopularComboBoxCortes();
             this.agendamento = new Agendamento();
             tb_id.Text = "";
             tb_data.Text = "";
@@ -29,6 +30,7 @@ namespace BarbeariaFogaca
         public FormAgendamentos(Agendamento agendamento)
         {
             InitializeComponent();
+            PopularComboBoxCortes();
             this.agendamento = agendamento;
             tb_id.Text = this.agendamento.id.ToString();
             tb_data.Text = this.agendamento.data.ToShortDateString();
@@ -107,7 +109,25 @@ namespace BarbeariaFogaca
 
         private bool verificarCampos()
         {
+            if (tb_cliente.Text == "")
+            {
+                return false;
+            }
             return true;
+        }
+
+        public void PopularTextBoxValores()
+        {
+            string id = cb_corte.SelectedValue.ToString();
+            DataTable dt = ObterValores(id);
+            tb_valor.Text = dt.Rows[0].Field<double>("D_VALOR").ToString();
+        }
+
+        private DataTable ObterValores(string id)
+        {
+            DataTable dt = new DataTable();
+            string sql = "select D_VALOR FROM tb_cortes WHERE N_IDCORTE = " + id;
+            return dt = Banco.dql(sql);
         }
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
@@ -118,6 +138,30 @@ namespace BarbeariaFogaca
         private void button2_Click(object sender, EventArgs e)
         {
             atualzarAgendamento();
+        }
+
+        private void btn_selecionar_Click(object sender, EventArgs e)
+        {
+            FormSelecaoCliente formSelecao = new FormSelecaoCliente();
+            formSelecao.ShowDialog();
+            tb_cliente.Text = VariaveisServico.nomeCliente;
+        }
+
+        public void PopularComboBoxCortes()
+        {
+            DataTable dt = ObterCortes();
+            cb_corte.DataSource = dt;
+            cb_corte.DisplayMember = "T_NOMECORTE";
+            cb_corte.ValueMember = "N_IDCORTE";
+
+        }
+
+        public DataTable ObterCortes()
+        {
+            DataTable dt = new DataTable();
+            string sql = "Select N_IDCORTE,T_NOMECORTE from tb_cortes ORDER BY T_NOMECORTE";
+            dt = Banco.dql(sql);
+            return dt;
         }
     }
 }
